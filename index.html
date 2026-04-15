@@ -20,22 +20,22 @@
         }
     </script>
     <style>
-        .text-glow { text-shadow: 0 0 40px rgba(99, 102, 241, 0.4); }
-        .glass-panel { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.5); }
+        .text-glow { text-shadow: 0 0 40px rgba(99, 102, 241, 0.2); }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(226, 232, 240, 1); }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
+<body class="bg-white text-slate-600 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
 
     <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-2xl font-bold tracking-tighter text-white">
+            <div class="text-2xl font-bold tracking-tighter text-slate-900">
                 EchoSim<span class="text-brand-500">.</span>
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#product" class="hover:text-brand-400 transition-colors">The App</a>
-                <a href="#team" class="hover:text-brand-400 transition-colors">Founder</a>
-                <a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a>
+                <a href="#product" class="hover:text-brand-600 transition-colors text-slate-600">The App</a>
+                <a href="#team" class="hover:text-brand-600 transition-colors text-slate-600">Founder</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors text-slate-600">Contact</a>
             </nav>
             <a href="#waitlist" class="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 transition-colors">
                 Join Beta
@@ -46,18 +46,19 @@
     <main class="flex-grow pt-20">
         <!-- Hero Section -->
         <section class="relative py-24 md:py-32 flex items-center justify-center overflow-hidden">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
+            <!-- Background gradient blobs (adjusted for light mode) -->
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-200/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl"></div>
             
             <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
                 <div>
-                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-xs font-semibold tracking-wide uppercase mb-6">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-brand-200 bg-brand-50 text-brand-600 text-xs font-semibold tracking-wide uppercase mb-6">
                         Private Beta Live
                     </div>
-                    <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 text-glow">
+                    <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">
                         The next layer of human connectivity.
                     </h1>
-                    <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
                         EchoSim uses advanced generative AI and social graph dynamics to create hyper-personalized mobile networking experiences. Currently testing flagship infrastructure on iOS and Android.
                     </p>
                     <a href="#waitlist" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 transition-colors">
@@ -65,9 +66,9 @@
                     </a>
                 </div>
                 
-                <!-- App Mockup -->
+                <!-- App Mockup (kept dark for contrast on white background) -->
                 <div class="relative mx-auto w-full max-w-[320px]">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 to-purple-600 rounded-[2.5rem] blur-xl opacity-20"></div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-400 to-purple-400 rounded-[2.5rem] blur-xl opacity-20"></div>
                     <div class="relative bg-slate-900 border-[8px] border-slate-800 rounded-[2.5rem] h-[600px] overflow-hidden shadow-2xl flex flex-col">
                         <div class="w-1/2 h-6 bg-slate-800 mx-auto rounded-b-2xl mb-4 relative z-20"></div>
                         <div class="px-5 flex items-center justify-between mb-4">
@@ -114,26 +115,26 @@
         </section>
 
         <!-- Team Section -->
-        <section id="team" class="py-24 bg-slate-900/50 border-y border-slate-800">
+        <section id="team" class="py-24 bg-slate-50 border-y border-slate-100">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl font-bold text-white mb-4 text-center">Meet the Founder</h2>
-                <p class="text-slate-400 text-center max-w-2xl mx-auto mb-16">Building the infrastructure for deeper social understanding and connectivity.</p>
+                <h2 class="text-3xl font-bold text-slate-900 mb-4 text-center">Meet the Founder</h2>
+                <p class="text-slate-500 text-center max-w-2xl mx-auto mb-16">Building the infrastructure for deeper social understanding and connectivity.</p>
                 
                 <div class="flex justify-center">
-                    <div class="glass-panel p-8 rounded-2xl w-full max-w-sm text-center">
+                    <div class="glass-panel p-8 rounded-2xl w-full max-w-sm text-center shadow-sm">
                         <!-- Profile Image Slot -->
                         <div class="relative w-32 h-32 mx-auto mb-6">
-                            <div class="absolute inset-0 bg-brand-500 rounded-full blur-lg opacity-20"></div>
-                            <!-- Updated Image classes to scale down and contain the photo -->
-                            <img src="./zichao-profile.JPG" alt="Zichao Yuan" onerror="this.src='https://ui-avatars.com/api/?name=Zichao+Yuan&background=4f46e5&color=fff&size=128'" class="relative w-32 h-32 rounded-full mx-auto object-contain bg-slate-900/40 p-1 border-2 border-brand-500/50 shadow-xl">
+                            <div class="absolute inset-0 bg-brand-500 rounded-full blur-lg opacity-10"></div>
+                            <!-- Adjusted scaling and padding for founder photo -->
+                            <img src="./zichao-profile.JPG" alt="Zichao Yuan" onerror="this.src='https://ui-avatars.com/api/?name=Zichao+Yuan&background=4f46e5&color=fff&size=128'" class="relative w-32 h-32 rounded-full mx-auto object-contain bg-white p-1 border border-slate-200 shadow-md">
                         </div>
                         
-                        <h3 class="text-xl font-semibold text-white">Zichao Yuan</h3>
-                        <p class="text-brand-400 text-sm mb-4">Founder & CEO</p>
-                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        <h3 class="text-xl font-semibold text-slate-900">Zichao Yuan</h3>
+                        <p class="text-brand-600 text-sm font-medium mb-4">Founder & CEO</p>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
                             Leading technical architecture and AI-driven simulation for the next generation of social platforms.
                         </p>
-                        <a href="https://www.linkedin.com/in/zichao-yuan/" target="_blank" class="text-slate-500 hover:text-brand-400 transition-colors inline-flex items-center gap-2 text-sm font-medium">
+                        <a href="https://www.linkedin.com/in/zichao-yuan/" target="_blank" class="text-slate-400 hover:text-brand-600 transition-colors inline-flex items-center gap-2 text-sm font-medium">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                             LinkedIn Profile
                         </a>
@@ -145,22 +146,22 @@
         <!-- Waitlist Section -->
         <section id="waitlist" class="py-24">
             <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-white mb-6 text-glow">Join the Private Beta</h2>
-                <p class="text-slate-400 mb-10">We are onboarding early testers for our iOS and Android applications. Enter your email to join the queue.</p>
+                <h2 class="text-3xl font-bold text-slate-900 mb-6">Join the Private Beta</h2>
+                <p class="text-slate-600 mb-10">We are onboarding early testers for our iOS and Android applications. Enter your email to join the queue.</p>
                 <form onsubmit="event.preventDefault(); alert('Added to waitlist!');" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                    <input type="email" placeholder="Enter your email" required class="flex-grow px-4 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500">
-                    <button type="submit" class="px-6 py-3 font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 transition-colors">Join Waitlist</button>
+                    <input type="email" placeholder="Enter your email" required class="flex-grow px-4 py-3 rounded-lg bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-brand-500 shadow-sm">
+                    <button type="submit" class="px-6 py-3 font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 transition-colors shadow-md">Join Waitlist</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-950 border-t border-slate-800 py-12">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm">
+    <footer class="bg-white border-t border-slate-100 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 text-sm">
             <div>&copy; 2026 EchoSim, Inc. All rights reserved.</div>
             <div class="flex gap-6">
-                <a href="#" class="hover:text-slate-300">Privacy Policy</a>
-                <a href="mailto:contact@echosim.ai" class="hover:text-slate-300">Contact Support</a>
+                <a href="#" class="hover:text-brand-600 transition-colors">Privacy Policy</a>
+                <a href="mailto:contact@echosim.ai" class="hover:text-brand-600 transition-colors">Contact Support</a>
             </div>
         </div>
     </footer>
