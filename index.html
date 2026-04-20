@@ -1,169 +1,585 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EchoSim | Applied AI & Social Dynamics</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: { brand: { 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5' } }
-                }
-            }
-        }
-    </script>
-    <style>
-        .text-glow { text-shadow: 0 0 40px rgba(99, 102, 241, 0.2); }
-        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(226, 232, 240, 1); }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echo Sim — Let Your AI Go on the First Date</title>
+  <meta name="description"
+    content="Echo creates your AI dating twin. It handles the awkward early chats. You show up when chemistry is proven." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>" />
+
+  <!-- OG / Social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Echo Sim — Let Your AI Go on the First Date" />
+  <meta property="og:description" content="Echo builds a digital twin of you. It simulates dates on your behalf. You only step in when the chemistry is real." />
+  <meta property="og:url" content="https://echosim.app" />
+  <!-- Replace og:image with a real 1200×630px screenshot of the app once available -->
+  <!-- <meta property="og:image" content="https://echosim.app/og-image.png" /> -->
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Echo Sim — Let Your AI Go on the First Date" />
+  <meta name="twitter:description" content="Echo builds a digital twin of you. It simulates dates on your behalf. You only step in when the chemistry is real." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-slate-600 font-sans antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
 
-    <!-- Navigation -->
-    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-2xl font-bold tracking-tighter text-slate-900">
-                EchoSim<span class="text-brand-500">.</span>
-            </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#product" class="hover:text-brand-600 transition-colors text-slate-600">The App</a>
-                <a href="#team" class="hover:text-brand-600 transition-colors text-slate-600">Founder</a>
-                <a href="#contact" class="hover:text-brand-600 transition-colors text-slate-600">Contact</a>
-            </nav>
-            <a href="#waitlist" class="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 transition-colors">
-                Join Beta
-            </a>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner container">
+      <a href="#" class="logo">Echo Sim</a>
+      <a href="#waitlist" class="btn btn-primary btn-sm">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag">AI Dating · Now in Beta</div>
+        <h1 class="hero-headline">
+          Let your AI<br />
+          <em>go on the first date.</em>
+        </h1>
+        <p class="hero-sub">
+          Echo builds a digital twin of you — your personality, your vibe, your standards.
+          It chats and simulates dates on your behalf. You only step in when the chemistry is real.
+        </p>
+        <div class="hero-ctas">
+          <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
+          <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
         </div>
-    </header>
+      </div>
+      <div class="hero-visual">
+        <!-- ┌─────────────────────────────────────────────────────────────┐
+             │ SCREENSHOT OPTION: Replace this mockup with a real         │
+             │ screenshot of an AI vs AI date transcript page.            │
+             │ Best screen: the date result page showing the full         │
+             │ conversation + affection timeline at the bottom.           │
+             │ Place inside a phone-frame div (class="phone-frame").      │
+             └─────────────────────────────────────────────────────────────┘ -->
+        <div class="chat-mockup">
+          <div class="chat-header">
+            <div class="chat-avatar chat-avatar--a">A</div>
+            <span class="chat-name">Alex's Echo</span>
+            <div class="chat-divider">×</div>
+            <span class="chat-name">Jordan's Echo</span>
+            <div class="chat-avatar chat-avatar--b">J</div>
+          </div>
+          <div class="chat-body">
+            <div class="chat-bubble chat-bubble--left">
+              What's something you're quietly proud of that you'd never put on a résumé?
+            </div>
+            <div class="chat-bubble chat-bubble--right">
+              I taught myself to cook properly during a rough period a few years back. Now it's honestly the thing I'm most proud of.
+            </div>
+            <div class="chat-bubble chat-bubble--left">
+              Heartbreak as culinary school — that's a very elegant way to rebuild.
+            </div>
+            <div class="chat-bubble chat-bubble--right">
+              The tiramisu especially. Very therapeutic to assemble layer by layer.
+            </div>
+            <div class="chat-bubble chat-bubble--left">
+              I suddenly need to know if I'm the kind of person worth making tiramisu for.
+            </div>
+          </div>
+          <div class="chat-footer">
+            <div class="affection-bar">
+              <span class="affection-label">Chemistry</span>
+              <div class="affection-track">
+                <div class="affection-fill" style="width: 74%"></div>
+              </div>
+              <span class="affection-value">74%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <main class="flex-grow pt-20">
-        <!-- Hero Section -->
-        <section class="relative py-24 md:py-32 flex items-center justify-center overflow-hidden">
-            <!-- Background gradient blobs (adjusted for light mode) -->
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-200/30 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-200/30 rounded-full blur-3xl"></div>
-            
-            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+  <!-- PROBLEM -->
+  <section class="section section--alt" id="problem">
+    <div class="container">
+      <p class="section-eyebrow">The Problem</p>
+      <h2 class="section-title">Modern dating is<br /><em>exhausting before it begins.</em></h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">💬</div>
+          <h3>The small-talk treadmill</h3>
+          <p>Hours of "how's your day" before you even know if you have anything real in common. Most people give up
+            before getting there.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">⏳</div>
+          <h3>No time to invest</h3>
+          <p>Busy professionals can't spend evenings nurturing ten conversations simultaneously. So they don't — and
+            miss great matches.</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">😶</div>
+          <h3>Great in person, bad at texting</h3>
+          <p>Some people are brilliant on a date but freeze up on a screen. They get filtered out before they ever get a
+            chance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKET OPPORTUNITY -->
+  <section class="section" id="market">
+    <div class="container">
+      <div class="market-text">
+        <p class="section-eyebrow">Market Opportunity</p>
+        <h2 class="section-title" style="margin-bottom: 1.5rem;">A $9.5B industry<br /><em>ripe for reinvention.</em></h2>
+        <p class="market-body">
+          The global online dating market is valued at <strong>$9.5 billion in 2025</strong> and projected to reach
+          $13.9 billion by 2030 — a 7.9% annual growth rate — yet the core user experience hasn't fundamentally
+          changed since 2012. Swipe, match, text awkwardly, ghost.
+        </p>
+        <p class="market-body">
+          Echo Sim targets the most painful moment in the funnel: the dead zone between matching and meeting.
+          By replacing low-signal small talk with AI-simulated dates, we turn every match into a qualified lead.
+        </p>
+        <div class="market-stats">
+          <div class="stat">
+            <div class="stat-value">$9.5B</div>
+            <div class="stat-label">Global market size (2025)</div>
+            <a class="stat-source" href="https://www.researchandmarkets.com/reports/4896717/online-personals-dating-services-market-global" target="_blank" rel="noopener">Research&amp;Markets ↗</a>
+          </div>
+          <div class="stat">
+            <div class="stat-value">380M+</div>
+            <div class="stat-label">Dating app users worldwide (2025)</div>
+            <a class="stat-source" href="https://www.statista.com/outlook/emo/dating-services/online-dating/worldwide" target="_blank" rel="noopener">Statista ↗</a>
+          </div>
+          <div class="stat">
+            <div class="stat-value">43%</div>
+            <div class="stat-label">Matches that never lead to a real conversation</div>
+            <a class="stat-source" href="https://www.swipestats.io/blog/dating-app-statistics" target="_blank" rel="noopener">SwipeStats, 350M+ users ↗</a>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section--alt" id="how-it-works">
+    <div class="container">
+      <p class="section-eyebrow">How It Works</p>
+      <h2 class="section-title">Three steps to<br /><em>meaningful connection.</em></h2>
+      <div class="steps-layout">
+
+        <!-- Step 01 -->
+        <div class="step-col">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div class="step-content">
+              <h3>Build your Echo</h3>
+              <p>Answer a short set of questions about your personality, values, and what you're looking for. Echo learns how you think and talk.</p>
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="mock-card">
+              <div class="mock-echo-header">
+                <div class="mock-echo-avatar">S</div>
                 <div>
-                    <div class="inline-flex items-center px-3 py-1 rounded-full border border-brand-200 bg-brand-50 text-brand-600 text-xs font-semibold tracking-wide uppercase mb-6">
-                        Private Beta Live
-                    </div>
-                    <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6">
-                        The next layer of human connectivity.
-                    </h1>
-                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                        EchoSim uses advanced generative AI and social graph dynamics to create hyper-personalized mobile networking experiences. Currently testing flagship infrastructure on iOS and Android.
-                    </p>
-                    <a href="#waitlist" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 transition-colors">
-                        Request Early Access
-                    </a>
+                  <div class="mock-echo-name">Sofia, 26</div>
+                  <div class="mock-echo-sub">Your Echo is ready</div>
                 </div>
-                
-                <!-- App Mockup (kept dark for contrast on white background) -->
-                <div class="relative mx-auto w-full max-w-[320px]">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-400 to-purple-400 rounded-[2.5rem] blur-xl opacity-20"></div>
-                    <div class="relative bg-slate-900 border-[8px] border-slate-800 rounded-[2.5rem] h-[600px] overflow-hidden shadow-2xl flex flex-col">
-                        <div class="w-1/2 h-6 bg-slate-800 mx-auto rounded-b-2xl mb-4 relative z-20"></div>
-                        <div class="px-5 flex items-center justify-between mb-4">
-                            <div class="text-white font-bold text-lg tracking-tight flex items-center gap-2">
-                                <div class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></div>
-                                EchoSim
-                            </div>
-                            <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700"></div>
-                        </div>
-                        <div class="px-5 flex-grow flex flex-col gap-4 relative z-10">
-                            <div class="w-full h-56 bg-gradient-to-br from-slate-800 to-slate-800/50 rounded-2xl border border-white/5 relative overflow-hidden flex flex-col justify-end p-4 group">
-                                <div class="absolute inset-0 bg-brand-600/10 group-hover:bg-brand-600/20 transition-colors"></div>
-                                <div class="w-1/2 h-5 bg-white/20 rounded mb-2 backdrop-blur-sm relative z-10"></div>
-                                <div class="w-1/3 h-3 bg-white/10 rounded backdrop-blur-sm mb-4 relative z-10"></div>
-                                <div class="flex gap-3 relative z-10">
-                                    <div class="h-10 w-10 rounded-full bg-slate-900/80 border border-slate-700 flex items-center justify-center backdrop-blur-sm">
-                                        <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                                    </div>
-                                    <div class="h-10 w-10 rounded-full bg-brand-500/20 border border-brand-500/50 flex items-center justify-center backdrop-blur-sm">
-                                        <svg class="w-5 h-5 text-brand-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-col gap-3 mt-2">
-                                <div class="self-end w-3/4 bg-brand-600 rounded-2xl rounded-tr-sm p-3 shadow-sm">
-                                    <div class="w-full h-2 bg-white/30 rounded mb-2"></div>
-                                    <div class="w-2/3 h-2 bg-white/30 rounded"></div>
-                                </div>
-                                <div class="self-start w-3/4 bg-slate-800 rounded-2xl rounded-tl-sm p-3 shadow-sm">
-                                    <div class="w-11/12 h-2 bg-white/10 rounded mb-2"></div>
-                                    <div class="w-full h-2 bg-white/10 rounded mb-2"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="h-16 border-t border-slate-800 bg-slate-900 flex items-center justify-around px-2 relative z-20">
-                            <div class="p-2"><svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg></div>
-                            <div class="p-2"><svg class="w-6 h-6 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg></div>
-                            <div class="p-2"><svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
-                            <div class="p-2"><svg class="w-6 h-6 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div>
-                        </div>
-                    </div>
+                <div class="mock-echo-badge">✓</div>
+              </div>
+              <div class="mock-echo-body">
+                <div class="mock-echo-section-label">Personality</div>
+                <div class="mock-echo-tags">
+                  <span class="mock-tag mock-tag--mbti">INFJ</span>
+                  <span class="mock-tag">Secure attachment</span>
                 </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="py-24 bg-slate-50 border-y border-slate-100">
-            <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4 text-center">Meet the Founder</h2>
-                <p class="text-slate-500 text-center max-w-2xl mx-auto mb-16">Building the infrastructure for deeper social understanding and connectivity.</p>
-                
-                <div class="flex justify-center">
-                    <div class="glass-panel p-8 rounded-2xl w-full max-w-sm text-center shadow-sm">
-                        <!-- Profile Image Slot -->
-                        <div class="relative w-32 h-32 mx-auto mb-6">
-                            <div class="absolute inset-0 bg-brand-500 rounded-full blur-lg opacity-10"></div>
-                            <!-- Adjusted scaling and padding for founder photo -->
-                            <img src="./zichao-profile.JPG" alt="Zichao Yuan" onerror="this.src='https://ui-avatars.com/api/?name=Zichao+Yuan&background=4f46e5&color=fff&size=128'" class="relative w-32 h-32 rounded-full mx-auto object-contain bg-white p-1 border border-slate-200 shadow-md">
-                        </div>
-                        
-                        <h3 class="text-xl font-semibold text-slate-900">Zichao Yuan</h3>
-                        <p class="text-brand-600 text-sm font-medium mb-4">Founder & CEO</p>
-                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
-                            Leading technical architecture and AI-driven simulation for the next generation of social platforms.
-                        </p>
-                        <a href="https://www.linkedin.com/in/zichao-yuan/" target="_blank" class="text-slate-400 hover:text-brand-600 transition-colors inline-flex items-center gap-2 text-sm font-medium">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            LinkedIn Profile
-                        </a>
-                    </div>
+                <div class="mock-echo-section-label">Vibe</div>
+                <div class="mock-echo-tags">
+                  <span class="mock-tag">Thoughtful</span>
+                  <span class="mock-tag">Dry humour</span>
+                  <span class="mock-tag">Curious</span>
                 </div>
+                <div class="mock-echo-section-label">Looking for</div>
+                <div class="mock-echo-intent">
+                  <div class="mock-intent-bar">
+                    <div class="mock-intent-fill" style="width: 65%"></div>
+                  </div>
+                  <div class="mock-intent-labels">
+                    <span>Casual</span><span>Long-term</span>
+                  </div>
+                </div>
+                <div class="mock-echo-section-label">About me</div>
+                <p class="mock-echo-bio">"I moved cities for a job I'd never done before. The worst case was just a good story."</p>
+              </div>
+              <div class="mock-echo-footer">
+                <div class="mock-action-btn mock-action-btn--primary">Start matching →</div>
+              </div>
             </div>
-        </section>
-
-        <!-- Waitlist Section -->
-        <section id="waitlist" class="py-24">
-            <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">Join the Private Beta</h2>
-                <p class="text-slate-600 mb-10">We are onboarding early testers for our iOS and Android applications. Enter your email to join the queue.</p>
-                <form onsubmit="event.preventDefault(); alert('Added to waitlist!');" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                    <input type="email" placeholder="Enter your email" required class="flex-grow px-4 py-3 rounded-lg bg-white border border-slate-200 text-slate-900 focus:outline-none focus:border-brand-500 shadow-sm">
-                    <button type="submit" class="px-6 py-3 font-semibold text-white bg-brand-600 rounded-lg hover:bg-brand-500 transition-colors shadow-md">Join Waitlist</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-white border-t border-slate-100 py-12">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-400 text-sm">
-            <div>&copy; 2026 EchoSim, Inc. All rights reserved.</div>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-brand-600 transition-colors">Privacy Policy</a>
-                <a href="mailto:contact@echosim.ai" class="hover:text-brand-600 transition-colors">Contact Support</a>
-            </div>
+            <div class="phone-home-bar"></div>
+          </div>
         </div>
-    </footer>
+
+        <!-- Step 02 -->
+        <div class="step-col">
+          <div class="step">
+            <div class="step-number">02</div>
+            <div class="step-content">
+              <h3>Your Echo dates for you</h3>
+              <p>Your Echo and theirs have a full simulated date — real conversation, real tension, real chemistry signals. No input from you.</p>
+            </div>
+          </div>
+          <div class="steps-screenshots">
+          <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="mock-card">
+            <div class="mock-card-header">
+              <div class="mock-sim-avatars">
+                <div class="mock-avatar mock-avatar--a">Y</div>
+                <div class="mock-sim-pulse">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="mock-avatar mock-avatar--b">J</div>
+              </div>
+              <div class="mock-sim-status">
+                <div class="mock-status-dot"></div>
+                Your Echo is on a date
+              </div>
+            </div>
+            <div class="mock-mini-chat">
+              <div class="mock-mini-bubble mock-mini-bubble--left">What do you actually do on Sunday mornings?</div>
+              <div class="mock-mini-bubble mock-mini-bubble--right">Farmers market. Then talk myself out of buying plants I'll kill.</div>
+              <div class="mock-mini-bubble mock-mini-bubble--left">You buy them anyway.</div>
+              <div class="mock-mini-bubble mock-mini-bubble--right">Every single time. 🌱</div>
+            </div>
+            <div class="mock-card-footer">
+              <span class="mock-footer-label">Chemistry building</span>
+              <div class="affection-track">
+                <div class="affection-fill mock-fill-animated" style="width: 58%"></div>
+              </div>
+              <span class="affection-value">58%</span>
+            </div>
+          </div>
+          <div class="phone-home-bar"></div>
+          </div><!-- /phone-frame -->
+          </div><!-- /steps-screenshots -->
+        </div><!-- /step-col 02 -->
+
+        <!-- Step 03 -->
+        <div class="step-col">
+          <div class="step">
+            <div class="step-number">03</div>
+            <div class="step-content">
+              <h3>Review, then meet</h3>
+              <p>Read the full transcript and chemistry score. Step in for an interactive date — or go straight to meeting in person.</p>
+            </div>
+          </div>
+          <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="mock-card">
+            <div class="mock-report-header">
+              <div class="mock-report-score-wrap">
+                <div class="mock-report-score">74</div>
+                <div class="mock-report-score-label">Chemistry Score</div>
+              </div>
+              <div class="mock-report-verdict">Strong intellectual match · Shared sense of humour</div>
+            </div>
+            <div class="mock-report-curve">
+              <div class="mock-curve-legend">
+                <span class="mock-legend-dot mock-legend-dot--you"></span><span>Your Echo</span>
+                <span class="mock-legend-dot mock-legend-dot--them"></span><span>Jordan's Echo</span>
+              </div>
+              <svg viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="gradYou" x1="0" y1="0" x2="200" y2="0">
+                    <stop offset="0%" stop-color="#65557b" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#65557b" stop-opacity="1"/>
+                  </linearGradient>
+                  <linearGradient id="gradThem" x1="0" y1="0" x2="200" y2="0">
+                    <stop offset="0%" stop-color="#7b8a65" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="#9aac80" stop-opacity="1"/>
+                  </linearGradient>
+                </defs>
+                <!-- Y-axis grid lines -->
+                <line x1="0" y1="56" x2="200" y2="56" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+                <line x1="0" y1="38" x2="200" y2="38" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+                <line x1="0" y1="20" x2="200" y2="20" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+                <!-- Their Echo — rises quickly then levels -->
+                <path d="M0 58 C15 55, 25 45, 45 38 S70 28, 90 25 S120 20, 145 18 S175 17, 200 16"
+                  stroke="url(#gradThem)" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="200" cy="16" r="3" fill="#9aac80"/>
+                <!-- Your Echo — slower start, strong finish -->
+                <path d="M0 62 C20 60, 35 55, 55 48 S85 35, 110 26 S145 12, 170 8 S190 5, 200 4"
+                  stroke="url(#gradYou)" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="200" cy="4" r="3.5" fill="#65557b"/>
+              </svg>
+              <div class="mock-curve-labels">
+                <span>Start of date</span><span>End</span>
+              </div>
+            </div>
+            <div class="mock-report-actions">
+              <div class="mock-action-btn mock-action-btn--primary">Try an interactive date →</div>
+              <div class="mock-action-btn mock-action-btn--ghost">Meet in person</div>
+            </div>
+          </div>
+          <div class="phone-home-bar"></div>
+          </div><!-- /phone-frame -->
+        </div><!-- /step-col 03 -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="container">
+      <p class="section-eyebrow">Features</p>
+      <h2 class="section-title">Designed for<br /><em>depth over swipes.</em></h2>
+      <div class="features-grid">
+        <div class="feature-card feature-card--wide">
+          <div class="feature-icon">🤖</div>
+          <h3>AI vs AI Dates</h3>
+          <p>Two Echos meet, talk, and simulate a full date — completely automatically. Each conversation is unique,
+            shaped by both personalities.</p>
+          <!-- ┌─────────────────────────────────────────────────────────┐
+               │ SCREENSHOT (optional): The "watching" view of an       │
+               │ AI vs AI date mid-simulation. Shows the real-time      │
+               │ message feed between two AI agents.                    │
+               └─────────────────────────────────────────────────────────┘ -->
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎭</div>
+          <h3>Human vs AI Mode</h3>
+          <p>Jump into an interactive date with someone's Echo yourself. Test the chemistry before committing to a real
+            meeting.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Psych-backed Profiles</h3>
+          <p>MBTI, attachment style, and intent modeling build Echos that behave authentically — not like chatbots.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Wild Echos</h3>
+          <p>Rare AI personalities — celebrities, fictional characters — unlock randomly as special matches. Low
+            probability, high intrigue.</p>
+          <!-- ┌─────────────────────────────────────────────────────────┐
+               │ SCREENSHOT (optional): A Wild Echo profile card —      │
+               │ e.g. the "Elon Ma" or "Gojo Satoru" card in the       │
+               │ discovery feed. Shows the gamification layer.          │
+               └─────────────────────────────────────────────────────────┘ -->
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Chemistry Reports</h3>
+          <p>Every date generates a full affection timeline, compatibility insights, and a plain-language summary of how
+            things went.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="section section--alt" id="technology">
+    <div class="container">
+      <p class="section-eyebrow">Technology</p>
+      <h2 class="section-title">AI that understands<br /><em>how people actually connect.</em></h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">🧬</div>
+          <h3>Personality Engine</h3>
+          <p>Each Echo is modeled on MBTI type, attachment style, emotional labor tendency, and intent spectrum. Behavior
+            emerges from the intersection of all four — not a script.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">⚡</div>
+          <h3>LLM-Powered Simulation</h3>
+          <p>Date conversations are generated by large language models with structured psychology prompts. Every
+            simulation is unique; no two dates play out the same way.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">📈</div>
+          <h3>Real-time Affection Scoring</h3>
+          <p>A proprietary scoring engine tracks chemistry moment-by-moment throughout the date, producing an affection
+            curve and compatibility verdict at the end.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🔒</div>
+          <h3>Identity Verification</h3>
+          <p>Liveness detection and face verification ensure every profile behind an Echo is a real person — no bots, no
+            catfishing.</p>
+        </div>
+      </div>
+      <div class="tech-stack-bar">
+        <span class="tech-stack-label">Built on</span>
+        <span class="tech-badge">LLM (OpenAI-compatible)</span>
+        <span class="tech-badge">Node.js</span>
+        <span class="tech-badge">React</span>
+        <span class="tech-badge">MongoDB</span>
+        <span class="tech-badge">Redis</span>
+        <span class="tech-badge">Capacitor (iOS / Android)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY DIFFERENT -->
+  <section class="section" id="why">
+    <div class="container">
+      <p class="section-eyebrow">Why Echo Sim</p>
+      <h2 class="section-title">Not another<br /><em>swipe app.</em></h2>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Traditional Apps</th>
+              <th class="compare-highlight">Echo Sim</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First contact</td>
+              <td>Manual texting, ghosting risk</td>
+              <td class="compare-highlight">AI-automated, always engaged</td>
+            </tr>
+            <tr>
+              <td>Screening depth</td>
+              <td>Photos + one-line bio</td>
+              <td class="compare-highlight">Full simulated date + persona model</td>
+            </tr>
+            <tr>
+              <td>Time to signal</td>
+              <td>Days or weeks of small talk</td>
+              <td class="compare-highlight">Minutes, while you do other things</td>
+            </tr>
+            <tr>
+              <td>Introverts / bad texters</td>
+              <td>Filtered out before a chance</td>
+              <td class="compare-highlight">Their Echo speaks for them fairly</td>
+            </tr>
+            <tr>
+              <td>Business model</td>
+              <td>Subscription or ad-based</td>
+              <td class="compare-highlight">Freemium + in-app simulation token economy</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section section--alt" id="team">
+    <div class="container">
+      <p class="section-eyebrow">Team</p>
+      <h2 class="section-title">Built by people who<br /><em>felt this problem.</em></h2>
+      <div class="team-grid">
+        <!-- ┌─────────────────────────────────────────────────────────────┐
+             │ PHOTO: Professional headshot or clean casual photo.        │
+             │ Square crop, at least 400×400px. Replace the placeholder   │
+             │ avatar below with an <img> tag.                            │
+             └─────────────────────────────────────────────────────────────┘ -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <img src="https://raw.githubusercontent.com/Zichao2025/echosim-landing-page/main/zichao-profile.JPG" alt="Zichao Yuan" />
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Zichao Yuan</h3>
+            <p class="team-role">Founder &amp; CEO</p>
+            <p class="team-bio">
+              <!-- 1–2 sentences: your background + why you're building this.
+                   e.g. "Previously at X. Built Echo because I watched too many smart people
+                   get filtered out by the wrong medium." -->
+              ExMeta Software Engineer. <br /> Ex AI Startup Software Engineer. <br />
+              Built Echo Sim because I watched too many smart, interesting people get filtered out by the outdated medium.
+            </p>
+            <div class="team-links">
+              <!-- Replace href with your LinkedIn profile URL -->
+              <a href="https://www.linkedin.com/in/zichao-yuan/" class="team-link" target="_blank" rel="noopener">LinkedIn →</a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more team-card blocks here if you have co-founders -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section class="section section--cta" id="waitlist">
+    <div class="container container--narrow">
+      <p class="section-eyebrow section-eyebrow--light">Early Access</p>
+      <h2 class="section-title section-title--light">Be among the first<br /><em>to meet your Echo.</em></h2>
+      <p class="waitlist-sub">We're currently in closed beta. Join the waitlist and we'll reach out when a spot opens.</p>
+      <form class="waitlist-form" id="waitlist-form">
+        <input type="hidden" name="_subject" value="New Echo Sim waitlist signup" />
+        <input
+          type="email"
+          name="email"
+          class="waitlist-input"
+          placeholder="your@email.com"
+          required
+          id="waitlist-email"
+          data-fs-field
+        />
+        <button type="submit" class="btn btn-gold" data-fs-submit-btn>Reserve My Spot</button>
+      </form>
+      <p class="waitlist-note" id="waitlist-msg"></p>
+
+      <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#waitlist-form', formId: 'mjgjeyao' });
+
+        document.getElementById('waitlist-form').addEventListener('formspree:success', function () {
+          document.getElementById('waitlist-msg').textContent = '✓ You\'re on the list! We\'ll be in touch soon.';
+          document.getElementById('waitlist-msg').style.color = '#a89bbf';
+        });
+      </script>
+      <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="logo logo--sm">Echo Sim</span>
+      <p class="footer-copy">© 2026 Echo Sim. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:yuanzichao0130@gmail.com">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.pain-card, .step, .feature-card, .compare-table-wrap, .tech-card, .team-card, .stat, .market-chart').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
