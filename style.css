@@ -110,8 +110,13 @@ body::before {
   color: var(--primary);
   text-decoration: none;
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.logo--sm { font-size: 1.1rem; }
+.logo--sm { font-size: 1.1rem; display: flex; align-items: center; gap: 0.4rem; }
+.logo-img { width: 28px; height: 28px; object-fit: contain; border-radius: 6px; }
+.logo-img--sm { width: 22px; height: 22px; }
 
 /* ─── Hero ───────────────────────────────────────────────────────────────── */
 .hero {
